@@ -3,16 +3,34 @@
 using namespace std;
 
 /**
- * Task 1.
- * Write a program that accepts time period given in seconds and returns it in the following format:
- * hours : minutes : seconds
+ * Task 2.
+ * Write your own function for swapping values of two integers using:
+ * a) passing by pointer
+ * b) passing by reference
  * */
 
+void swap_via_pointers(int* a, int*b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void swap_via_refs(int&a, int&b){
+    int temp = a;
+    a = b;
+    b = temp;
+}
 int main() {
-    int seconds;
-    cin >> seconds;
-    int minutes = seconds / 60;
-    int hours = minutes / 60;
-    cout << hours << ":" << minutes % 60 << ":" << seconds % 60;
+    int first;
+    int second;
+
+    cin >> first;
+    cin >> second;
+
+    swap_via_pointers(&first, &second);
+    cout << first << endl << second << endl;
+
+    swap_via_refs(first, second);
+    cout << first << endl << second << endl;
     return 0;
 }
