@@ -1,2 +1,2 @@
 # SSAD
-Labs solutions. SSAD =(
+Solutions for some labs
